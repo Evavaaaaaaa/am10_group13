@@ -1,5 +1,5 @@
 # am10_group13
-Data Visaulisation for Storytelling - Group 13
+Data Visualisation for Storytelling - Group 13
 # How English football teams' performance affect the evolution of the FTSE 100
 We want to evaluate whether the results of English professional football teams affect the performance of the main UK stock market index, the FTSE 100. We have several datasets: domestic (club) football game results (>1M observations), international (national team) football game results (>45k observations) and the evolution of the FTSE 100 index in the last few decades. We want to join those and explore potential relationships.
 
