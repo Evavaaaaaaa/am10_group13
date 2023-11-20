@@ -1,0 +1,43 @@
+---
+title: "Stock price evolution visualisation"
+output: html_document
+date: "2023-11-20"
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+library(gapminder)
+library(readr)
+library(tidyr)
+library(dplyr)
+library(ggplot2)
+library(lubridate)
+library(ggtext)
+library(showtext)
+
+```
+
+
+```{r, warning=FALSE}
+
+finance_final <- read_csv('C:/Users/thoma/Documents/AAA Thomas/School/LBS/Term1/Data Visualisation and Story Telling/am10.mam2023-main/Group Project/finance_final.csv')
+
+ftse100_evolution_plot <- finance_final %>% 
+  ggplot() +
+  geom_line(aes(x = date, y = Open), colour = "darkblue", size = 0.75) +
+  theme_minimal() +
+  labs(title = 
+      "<b>Evolution of the <span style='color:darkblue'>FTSE100 index</span> since 2001</b>",
+      x = NULL,
+      y = NULL) +
+  theme(plot.title = element_textbox_simple(size = 14, colour = "grey15", margin = margin(t = 10, b = 10)),
+        axis.text.x = element_text(hjust = 0.5),
+        axis.ticks.x = element_line(color = "grey15"),
+        text = element_text(size = 12, family = "Montserrat")) +
+  theme(plot.margin = margin(r = 10, l = 10))
+
+ftse100_evolution_plot
+
+```
+
